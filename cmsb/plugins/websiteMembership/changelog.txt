@@ -1,0 +1,180 @@
+-------------------------------------------------------------------------------
+
+*** October 05, 2022 - Version 1.14 Released
+
+SERVER REQUIREMENTS: CMS v3.12
+
+NEW FEATURES
+- PHP 8.1 support
+
+-------------------------------------------------------------------------------
+
+*** January 17, 2018 - Version 1.13 Released
+
+SERVER REQUIREMENTS: CMS v3.12
+
+NEW FEATURES
+- Code Generator: Login Page now automatically supports Facebook Login v2+ (requires separate plugin)
+- Code Generator: Merged password request and reset pages into one (older versions will still work)
+- Misc Code and other minor improvements
+
+-------------------------------------------------------------------------------
+
+*** June 20, 2017 - Version 1.12 Released
+
+SERVER REQUIREMENTS: CMS v3.00+
+
+NEW FEATURES
+- Signup Email: Added placeholders for all user fields as user.fieldname
+- Languages: Added language translation files for login error messages
+- Security: Automatically encrypts plaintext passwords in database on first login
+- Misc Code and other minor improvements
+
+-------------------------------------------------------------------------------
+
+*** January 14, 2016 - Version 1.11 Released
+
+SERVER REQUIREMENTS: CMS v3.00+
+
+NEW FEATURES
+- Updated to work with CMS v3.00
+- Automatically encrypts plaintext passwords in database on first login
+
+-------------------------------------------------------------------------------
+
+*** June 3, 2013 
+
+SERVER REQUIREMENTS: CMS v2.52
+NOTE: If upgrading from Website Membership 1.09 or earlier, recreate the Password Reset and Edit Profile pages with Code Generator.
+
+MINOR CHANGES & BUG FIXES
+- Commented out lastUrl cookie so that global WEBSITE_LOGIN_POST_LOGIN_URL global is used by default.
+
+-------------------------------------------------------------------------------
+
+*** March 8, 2013 - Version 1.10 Released
+
+SERVER REQUIREMENTS: CMS v2.52
+NOTE: If upgrading from Website Membership 1.09 or earlier, recreate the Password Reset and Edit Profile pages with Code Generator.
+
+NEW FEATURES
+- Security: Added blacklist of top 100k common passwords.  Found in /lib/login_password_blacklist.txt
+- Usability: Whitespace is removed from beginning and end of username and password on login (to prevent copy and paste errors)
+- Usability: Passwords that start or end with spaces are no longer allowed.
+
+MINOR CHANGES & BUG FIXES
+- Misc Code and other minor improvements
+
+-------------------------------------------------------------------------------
+
+*** January 29, 2013 - Version 1.09 Released
+
+NEW FEATURES
+- Login Form: Users can now login with either username or email (on sites supporting usernames)
+- Signup Form: Username support can be disabled by setting $useUsernames = false;
+- Profile Form: Username support can be disabled by setting $useUsernames = false;
+- Profile Form: Added sample commented code for adding "Agree to Terms of Service" checkbox
+- Email Templates: can now be edited in CMS under: Admin > Email Templates
+- Example Pages: can now be generated under: Admin > Code Generator
+- Account Table: Changing account table name will cause new table to be created if it doesn't exist
+
+
+MINOR CHANGES & BUG FIXES
+- Enabled "Required System Plugin: True" in plugin so plugin can't be accidentally disabled
+- Fixed bugs related to invalid links being generated in some instances
+- Logoff now redirects back to referring page if no other url specified
+- Login page now redirects back to referring page if no other url specified
+- Removed files: Old email templates folder /emails/ has been removed
+- Removed files: Old example files folder /examples/ has been removed
+- Misc Code and other minor improvements
+
+-------------------------------------------------------------------------------
+
+*** October 29, 2012 - Version 1.08 Released
+
+MINOR CHANGES & BUG FIXES
+- Added a plugin hook 'wsm_loginSuccess' to allow custom code to always run after a user successfully logs in
+- Added a plugin hook '_websiteLogin_init.pre_actionHandler' to support future social media login plugins
+- Added new option 'WEBSITE_LOGIN_REQUIRED_FIELDS' to force users to fill out required profile fields
+- Fixed bug where entire $_SESSION array would be erased when a user was not logged in
+
+-------------------------------------------------------------------------------
+
+*** January 27, 2012 - Version 1.07 Released
+
+MINOR CHANGES & BUG FIXES
+- On save of WSM_ACCOUNTS_TABLE, if it's not accounts, encrypt passwords if needed
+- Example files now use $GLOBALS['WSM_ACCOUNTS_TABLE'] instead of 'accounts' so they recognize different accounts tablenames
+- Sign-up example file no longer updates the _accesslist table if using a seperate table for website users
+
+-------------------------------------------------------------------------------
+
+*** October 27, 2011 - Version 1.06 Released
+
+NEW FEATURES
+- You can now specify a separate accounts tables for website users (see WSM_ACCOUNTS_TABLE in plugin code)
+- You can now login to the CMS and website as different users simultaneously (see WSM_SEPARATE_LOGIN in plugin code)
+
+MINOR CHANGES & BUG FIXES
+- Fixed bug where plugin code was being automatically run by command-line scripts
+- Fixed typo on examples/user-signup.php.  Changed $errors to $mailErrors on line 96
+
+-------------------------------------------------------------------------------
+
+*** June 29, 2011 - Version 1.05 Released
+
+MINOR CHANGES & BUG FIXES
+- Fixed display of mail errors in email template
+- Fixed issue with reset password feature causing an error
+
+-------------------------------------------------------------------------------
+
+*** May 30, 2011 - Version 1.04 Released
+
+NEW FEATURES
+- Updated Plugin and sample_profile.php to support new Encrypted Passwords feature in v2.08
+- Email templates are now available in /emails/
+
+MINOR CHANGES & BUG FIXES
+- You can now add false to websiteLogin_redirectToLogin(false) to prevent the user from being redirected back to the previous page after login
+- Profile: You can now avoid having users logged out after changing their username and/or password by calling the new websiteLogin_setLoginTo() function
+
+
+-------------------------------------------------------------------------------
+
+*** September 23, 2010 - Version 1.03 Released
+
+MINOR CHANGES & BUG FIXES
+- Login: After login users are now directed to the last "login-required" page instead of WEBSITE_LOGIN_POST_LOGIN_URL
+- Docs: Added section to readme.txt: How to display custom login errors (Not approved yet, etc)
+- Errors: Message is now displayed for disabled accounts on login: "Your account has been disabled!"
+- Typo: Fixed version number (1.02 displayed 1.01)
+
+-------------------------------------------------------------------------------
+
+*** February 24, 2010 - Version 1.02 Released
+
+NEW FEATURES
+- Docs: Added section to readme.txt: How to add a custom text field
+- Docs: Added section to readme.txt: How to add radio fields with values loaded from CMS
+- Erase Account: Added new button on profile page to allow users to remove their accounts
+- Misc Code and other minor improvements
+
+-------------------------------------------------------------------------------
+
+*** January 6, 2010 - Version 1.01 Released
+
+NEW FEATURES
+- User Signup: user is now emailed a random password to confirm their email address (they can't login without receiving password)
+- Edit Profile: added new form to allow user to update their profile details and change their password
+- Docs: Added section to readme.txt on how to use email instead of username (so user can login with email)
+
+-------------------------------------------------------------------------------
+
+*** December 17, 2009 - Version 1.00 Released
+
+First Release
+
+-------------------------------------------------------------------------------
+
+*** NOTE: NEW ENTRIES ARE LISTED AT THE TOP ***

@@ -1,0 +1,62 @@
+HOW TO UPGRADE PLUGINS
+Follow these steps to upgrade or update a plugin.
+-------------------------------------------------------------------------------
+
+
+1) UPGRADE TO THE LATEST CMS VERSION
+-------------------------------------------------------------------------------
+Upgrade to the latest CMS version.  This will ensure that any new software
+features used by the plugin will be available.
+
+If you decide not to upgrade then you must check the "Requires at least: x.xx"
+line at the top of the plugin file to ensure you have the version required or
+newer.
+
+
+2) LOCATE PLUGINS FOLDER
+-------------------------------------------------------------------------------
+The first step is to locate your [cmsb] folder.  This is the folder on
+your website where you originally installed the CMS software.  There will
+be a folder under this called /plugins/.  This is your plugins folder.
+
+
+3) BACKUP PLUGINS FOLDER
+-------------------------------------------------------------------------------
+Download a backup copy of the /plugins/ folder and any files or folders in it.
+
+
+4) CHECK REQUIRED CMS VERSION
+-------------------------------------------------------------------------------
+Check the "Requires at least" line at the top of the plugin.  This is the
+CMS version that the plugin requires.  Make sure you have this version before
+upgrading as the plugin can't be activated and may generate errors if the
+CMS version is lower than the version required.
+
+
+5) REVIEW PLUGIN INSTRUCTIONS
+-------------------------------------------------------------------------------
+Review the readme.txt file that came with the plugin before continuing for
+further instructions.
+
+
+6) COPY USER CONFIGURABLE SETTINGS
+-------------------------------------------------------------------------------
+Some plugins have use configurable settings that can be modified at the top of
+the plugin file.  Check for these and copy any custom settings that you've
+previously entered over to the new plugin file.
+
+
+7) UPLOAD PLUGIN FILE
+-------------------------------------------------------------------------------
+Upload the new plugin file.  If the new plugin has the same filename as the old
+one just upload it over top of the old one.
+
+
+8) TROUBLESHOOTING
+-------------------------------------------------------------------------------
+If you need help please refer to the plugin readme file or contact support for
+assistance.
+
+
+-------------------------------------------------------------------------------
+end of file.

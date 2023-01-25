@@ -1,0 +1,9 @@
+{
+    "minimum-stability": "stable",
+    "require": {
+    },
+    "config" : {
+      "platform": { "php": "7.1.0" },
+      "vendor-dir" : "vendor"
+    }
+}

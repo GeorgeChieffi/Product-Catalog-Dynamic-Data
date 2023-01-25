@@ -1,0 +1,98 @@
+# CMS PHP Config Files
+# --------------------------------------------------------------------------------------------
+# These config files attempt to reset PHP and Apache settings to standard values and turn off
+# deprecated or problematic features that would otherwise cause errors or problems.
+#
+# NOTE: These files aren't supported on all servers, but on many they will prevent problems.
+# However, they are OPTIONAL and you can safely remove these files if needed.
+# --------------------------------------------------------------------------------------------
+# .htaccess - For Apache, Apache PHP module and IIS with .htaccess emulator: http://php.net/configuration.changes
+# .user.ini - For servers running PHP in CGI/FastCGI mode: http://php.net/configuration.file.per-user
+# php.ini   - For servers that support custom php.ini files: http://php.net/configuration.file
+# --------------------------------------------------------------------------------------------
+# *** IMPORTANT!!! If you make any changes to this file save a backup copy as <filename>.backup
+# so you have a backup in case your changes get overwritten next time you upgrade.
+
+# .htaccess settings
+# --------------------------------------------------------------------------------------------
+# Docs: http://php.net/configuration.changes
+# Docs: http://php.net/manual/en/ini.php
+
+# Apache: disable directory browsing
+Options -Indexes
+
+# Apache: disable mod_security (some of the admin menus allow you to define SQL which mod_security detects and then denied access to)
+<IfModule mod_security.c>
+  SecFilterEngine Off
+  SecFilterScanPOST Off
+</IfModule>
+
+# Apache: disable mod_gzip for cms admin folder (tinymce gzips javascript and sometimes things get double encoded causing errors)
+<IfModule mod_gzip.c>
+  mod_gzip_on No
+</IfModule>
+
+# Apache: Fix issue where some servers send wrong content-type and FireFox won't load stylesheets
+<ifModule mod_mime.c>
+  AddType text/css .css
+</ifModule>
+
+# PHP: turn off deprecated PHP features and increase max upload size allowed
+<IfModule mod_php5.c>
+  php_value date.timezone UTC
+  #php_value disable_functions none # Entry can only be set in php.ini or httpd.conf
+  php_value max_input_vars 2000
+  php_value open_basedir none
+  php_value post_max_size 101M
+  php_value upload_max_filesize 101M
+  # php_flag zlib.output_compression Off
+</IfModule>
+
+# Identify loaded modules
+<IfModule mod_env.c>
+  SetEnv CMSB_APACHE_HTACCESS 1
+  SetEnv CMSB_MOD_ENV 1
+  <IfModule mod_php5.c>
+    SetEnv CMSB_MOD_PHP5 1
+  </IfModule>
+  <IfModule mod_fcgid.c>
+    SetEnv CMSB_MOD_FCGID 1
+  </IfModule>  
+  <IfModule mod_suphp.c>
+    SetEnv CMSB_MOD_SUPHP 1
+    #suPHP_Engine on
+    #suPHP_ConfigPath /full/path/to/folder/with/php.ini/in/it
+  </IfModule>
+  <IfModule mod_security.c>
+    SetEnv CMSB_MOD_SECURITY1 1
+  </IfModule>
+  <IfModule mod_security2.c>
+    SetEnv CMSB_MOD_SECURITY2 1
+  </IfModule>
+  <IfModule mod_rewrite.c>
+    SetEnv CMSB_MOD_REWRITE 1
+  </IfModule>
+  <IfModule mod_headers.c>
+    SetEnv CMSB_MOD_HEADERS 1
+  </IfModule>
+  <IfModule mod_expires.c>
+    SetEnv CMSB_MOD_EXPIRES 1
+  </IfModule>
+</IfModule>
+
+# SECURITY: Deny access to common configuration and data files, eg: .htaccess, php.ini, .user.ini, php_errors.log, backup.sql, etc
+<FilesMatch "\.(htaccess|ini|log|sql)$">
+Order Deny,Allow
+Deny from All
+</FilesMatch>
+# SECURITY: Deny access to common configuration and data files with php extensions, eg: settings.dat.php, etc
+<FilesMatch "\.(dat|defaultSqlData|log|sql)\.php$">
+Order Deny,Allow
+Deny from All
+</FilesMatch>
+
+# Identify loaded config files - repurpose some lesser used php.ini directives to indicate which config files loaded
+<IfModule mod_php5.c>
+  php_value highlight.html '#000000; CMSB_CONFIG_HTACCESS'
+  php_value date.default_latitude '11.1111 CMSB_CONFIG_HTACCESS'
+</IfModule>

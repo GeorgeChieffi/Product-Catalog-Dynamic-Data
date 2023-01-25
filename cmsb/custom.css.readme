@@ -1,0 +1,9 @@
+HOW TO ADD A CUSTOM CSS FILE
+-------------------------------------------------------------------------------
+
+You can add your own upgrade-safe custom CSS file by creating a file named
+'custom.css' in this directory.  If a file with that name exists it will
+automatically be loaded by the software below all the other CSS files.
+
+-------------------------------------------------------------------------------
+end of file

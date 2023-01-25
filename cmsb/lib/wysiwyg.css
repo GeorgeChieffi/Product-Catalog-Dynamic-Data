@@ -1,0 +1,61 @@
+/* -----------------------------------------------------------------------------------
+   *** README ***
+   The CSS rules in this file are applied specifically to the contents of a WYSIWYG
+   editors ONLY and are loaded by /lib/wysiwyg.php or /lib/wysiwyg_custom.php
+   
+   To style the WYSIWYG with the same CSS rules as your website either:
+     1) add your site's CSS styles below or
+     2) Create a wyswiwyg_custom.php file and set 'content_css' to your CSS file URL
+        Reference: https://www.tiny.cloud/docs-4x/configure/content-appearance/#content_css
+   
+   If you've added a custom 'style_formats' option in /cmsb/lib/wysiwyg.php, you can
+   add the CSS rules for those style formats as classes below (or inline as styles).
+   Reference: https://www.tiny.cloud/docs-4x/configure/content-formatting/#style_formats
+   
+   WARNING:
+   If you want to make changes to this file save it as wysiwyg_custom.css so it won't
+   get overwritten next time you upgrade.  *_custom files are loaded first if available.
+   
+   ----------------------------------------------------------------------------------- */
+
+/* -----------------------------------------------------------------------------------
+   If you want to use your website CSS you can uncomment the following @import line and 
+   customize it to point to your website's main CSS file. Duplicate as needed for 
+   additional stylesheets.
+   
+   Additional CSS can be added to this file to override imported styles.
+   ----------------------------------------------------------------------------------- */
+
+/* @import "/path/to/your.css"; */
+
+body {
+  background:#FFFFFF;
+}
+
+body, td, pre {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #000;
+}
+
+blockquote {
+	border: 1px dashed #666;
+  margin: 5px 5px 0 15px;
+	padding:5px 20px;
+  font-style:italic;
+  background-color: #EEE;
+
+  /* uncomment for right aligned blockquote/pullquote
+	width: 250px;
+	float: right;
+  */
+
+}
+
+/* -----------------------------------------------------------------------------------
+   Add CSS rules for your custom 'style_formats' classes here.
+   See the following for an example.
+   ----------------------------------------------------------------------------------- */
+
+.exampleClass1 { color: red; font-size: 18px; }
+.exampleClass2 {}

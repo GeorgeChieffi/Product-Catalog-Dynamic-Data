@@ -1,0 +1,86 @@
+HOW TO ADD LANGUAGES FILES
+--------------------------
+
+1) Make a copy of en.php named after your 2 letter language code, see:
+   http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
+
+2) Edit the file and replace the text on the right with your translation.
+
+3) Single quotes and slashes have a special meaning: insert a \ before them like this: \' and \\ .
+
+4) Copy and translate any additional files, such as forgotPasswordEmail.default.php -
+   renaming 'default' with your language code.
+
+5) If there's no Datepicker language file matching your language code
+   in 3rdParty/jqueryUI/i18n, create or rename one to match.
+
+6) Change your language in: Admin > General > Regional Settings > Program Language.
+
+7) Send us a copy of your language file to be included in future releases.
+
+
+PROGRAMMERS - HOW TO ADD LANGUAGE STRINGS
+-----------------------------------------
+This software allows you to automatically enter language strings and
+allow for easy translation by users of different languages.
+
+Language files are stored in three places:
+lib/languages/*         - default language strings used in the CMS.
+lib/languages/adminMenu - admin language strings used in the CMS Admin menus.
+plugins/*/languages     - plugin language strings used by specific plugins.
+
+If a language string can't be found in one file the others files may be
+checked.  Plugins check their own language files, then admin, then default.
+Admin menus check admin, then default, and other CMS menus just check default.
+
+To automatically add new language strings to the language files
+go to Admin > General > Regional Settings, and enable this option:
+  Developer Mode [x] Automatically add new language strings to language files.
+
+Language strings will only be added if they are not already found in one of
+the checked files.  When a language string does need to be added, the necessary language
+directory and files will be created and the new string will be added
+to all the various language files so it is ready to be translated.
+
+The translation and language functions can be found in: lib/language_functions.php.
+
+The basic function is named translateString().  It automatically loads and caches
+the appropriate language file and returns the translated string if available, or
+the default string if no translation is found.
+
+Example Usage:
+  <?php echo "Search"; ?>                   // prints "Search"
+  <?php echo translateString("Search"); ?>  // prints "Rechercher" (if language is french)
+
+For ease of use there are several shortcut functions that replace common code patterns:
+  <?php $word = t("Search"); ?> // shortcut for: $word = translateString("Search");
+  <?php et("Search"); ?>        // shortcut for: echo translateString("Search");
+  <?php eht("Search"); ?>       // shortcut for: echo htmlencode(translateString("Search"));
+                                // NOTE: htmlencode() is our improved version of html_special_chars()
+
+When displaying strings with variables in them, such as "Found 32 matches" use
+sprintf() or printf() so that the string only needs to be translated once
+instead of once for each possible variation. Example:
+  <?php printf( t("Found %s matches!"), $count ); ?>
+  <?php $msg = sprintf( t("Found %s matches!"), $count ); ?>
+
+When displaying strings with multiple variables use argument numbering/swapping
+so that translators can express the words in different order if needed.  Example:
+
+<?php
+  $num      = 5;
+  $location = 'tree';
+
+  // without argument numbering (order can't be switched)
+  echo printf( t('There are %d monkeys in the %s'), $num, $location);
+
+  // with argument numbering (allows sentence order to be changed)
+  echo sprintf( t('There are %1$d monkeys in the %2$s'), $num, $location);
+  echo sprintf( t('The %2$s contains %1$d monkeys'),     $num, $location);
+
+  // also lets you repeat placeholders if you want
+  echo sprintf( t('The %2$s contains %1$d monkeys.
+                   That\'s a nice %2$s full of %1$d monkeys.'), $num, $location);
+?>
+
+If you have any other questions please contact support.

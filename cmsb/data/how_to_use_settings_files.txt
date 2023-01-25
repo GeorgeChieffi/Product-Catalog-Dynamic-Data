@@ -1,0 +1,19 @@
+HOW TO USE MULTIPLE SETTINGS FILES
+-------------------------------------
+
+If you run the software on both a development and a live server, you can create a
+copy of settings.dat.php for your development environment by naming it after
+the hostname of your development server (typically localhost).
+
+For example, if you create a copy called settings.localhost.php, the software
+will use that file when it's running on localhost, but default to
+settings.dat.php when it runs anywhere else.
+
+This functionality is especially useful for supplying separate MySQL details.
+Once you have this set up, you won't have to worry about overwriting the "wrong
+version" of a settings file; you can safely upload and download both files with
+FTP and the correct one will be used on each server.
+
+Note: Only ever use custom settings files for development servers, always use
+the default file for your "live" or production server.  That way if you live
+domain name changes things won't break.

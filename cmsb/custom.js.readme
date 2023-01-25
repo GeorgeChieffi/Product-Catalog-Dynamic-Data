@@ -1,0 +1,9 @@
+HOW TO ADD A CUSTOM JAVASCRIPT FILE
+-------------------------------------------------------------------------------
+
+You can add your own upgrade-safe custom Javascript file by creating a file
+named 'custom.js' in this directory.  If a file with that name exists it will
+automatically be loaded by the software in the head of the document.
+
+-------------------------------------------------------------------------------
+end of file

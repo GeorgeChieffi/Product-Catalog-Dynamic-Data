@@ -1,0 +1,43 @@
+.navbar {
+	display: none;
+}
+.main-navigation{
+	display: none;
+}
+.hidden-print {
+	display: none;
+}
+.breadcrumb {
+	display: none;
+}
+.page-header {
+	display: none;
+}
+.footer {
+	display: none;
+}
+.main-container {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+.main-content .container{
+	min-height: auto !important;
+	border: none !important;
+}
+a[href]:after{
+	/*
+	bootstrap.min.css displays URL as text beside the anchor links on print preview: http://drupal.stackexchange.com/questions/59900/
+	.. remove the URL by overriding the "content" attribute of a[href]:after
+	*/
+	content: none !important;
+}
+.panel, .container{
+	/*
+	Chrome print preview black background issue fix. Chrome issue: https://bugs.chromium.org/p/chromium/issues/detail?id=487086
+	.. force white background when printing
+	.. set '-webkit-print-color-adjust' to economy so that we don't get black background when
+	.. ctrl+p -> More settings -> Options -> Background graphics is checked. ref: https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-print-color-adjust
+	*/
+	background-color: #FFF !important;
+	-webkit-print-color-adjust: economy;
+}

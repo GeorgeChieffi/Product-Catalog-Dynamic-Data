@@ -1,0 +1,4 @@
+HOW TO MOVE DATA FOLDER
+-------------------------------------
+To store your /data/ folder outside of your webroot or in an alternate location,
+see the instructions in the file data_folder.php.example in your main CMS folder.

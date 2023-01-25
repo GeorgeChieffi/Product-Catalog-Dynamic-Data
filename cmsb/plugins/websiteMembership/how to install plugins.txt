@@ -1,0 +1,51 @@
+HOW TO INSTALL PLUGINS
+Follow these steps to install a plugin.
+-------------------------------------------------------------------------------
+
+
+1) UPGRADE TO THE LATEST CMS VERSION
+-------------------------------------------------------------------------------
+Upgrade to the latest CMS version.  This will ensure that any new software
+features used by the plugin will be available.
+
+If you decide not to upgrade then you must check the "Requires at least: x.xx"
+line at the top of the plugin file to ensure you have the version required or
+newer.
+
+
+2) LOCATE PLUGINS FOLDER
+-------------------------------------------------------------------------------
+The next step is to locate your [cmsb] folder.  This is the folder on
+your website where you originally installed the CMS software.  There will
+be a folder under this called /plugins/.  This is your plugins folder.
+
+
+3) REVIEW PLUGIN INSTRUCTIONS
+-------------------------------------------------------------------------------
+Review the readme.txt file that came with the plugin before continuing for
+further instructions.
+
+
+4) UPLOAD PLUGIN FILE
+-------------------------------------------------------------------------------
+To install the plugin, upload your plugin files to the /plugins/ folder that
+you located in the above step.  If your plugin comes in a folder, upload the
+entire folder under /plugins/.  Example /plugins/myPlugin/
+
+
+5) ACTIVATE PLUGIN
+-------------------------------------------------------------------------------
+Login to the CMS software, then navigate to this menu: Admin > Plugins.
+The new plugin should be listed under "Inactive Plugins".  Locate it and click
+the "Activate" link beside the plugin.  The plugin should now we listed above
+in the "Active Plugins" list.
+
+
+6) TROUBLESHOOTING
+-------------------------------------------------------------------------------
+If you need help please refer to the plugin readme file or contact support for
+assistance.
+
+
+-------------------------------------------------------------------------------
+end of file.

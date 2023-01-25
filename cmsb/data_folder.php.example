@@ -1,0 +1,23 @@
+<?php /*
+Data folder path - This file allows you to change the location of your /data/ folder
+If you would like to store your /data/ folder outside of your webroot, or in a
+different location, just follow the instructions below:
+
+Instructions:
+- Backup your /data/ folder
+- Move your /data/ folder to your new preferred location and give it a name such as: /cms-data/
+- Rename this file from data_folder.php.example to data_folder.php
+- Login to your CMS and confirm everything works as expected
+- And that's it!
+
+*/
+// path to your data folder
+// Note: if you use relative paths (that start with .) they will be relative to the the directory THIS file is in (eg: /cms/)
+//
+// Examples:
+// return "../../cmsb-data/";   // up 3 folders, if your default path is /www/htdocs/cms/data/ this would refer to /www/cms-data/
+// return "/www/cmsb-data/";    // specify absolute path to data folder
+
+return "../cms-data/";
+
+// end-of-file

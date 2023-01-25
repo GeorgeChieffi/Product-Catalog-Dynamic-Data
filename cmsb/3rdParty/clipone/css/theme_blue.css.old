@@ -1,0 +1,451 @@
+/* If you need to update custom themes from before v3.51 compare this file to theme_blue.css to see changes */
+
+body, .main-content {
+  background-color: #f0f0f0;
+  color: #000000;
+}
+a {
+  color: #428bca;
+}
+a:hover, a:focus {
+  color: #2a6496;
+}
+
+.panel, .modal-content {
+  color: #000000;
+  background-color: #ffffff;
+}
+.dragger, .label {
+  color: #000000;
+}
+
+.panel-default > .panel-heading, .modal-header {
+  background-color: inherit;
+  border-bottom-color: #cccccc;
+}
+.panel-default > .panel-footer, .modal-footer {
+  background-color: #ffffff;
+  border-top-color: #cccccc;
+}
+.panel-default {
+  border-color: #cccccc;
+}
+.panel-default > .panel-heading h3, .panel-default > .panel-heading h3 a {
+  color: #000000;
+}
+
+.navbar-header .sidebar-title a {
+  color: #ffffff}
+.navbar-header .sidebar-title a:hover {
+  color: #ffffff}
+ul.main-navigation-menu > li > ul > li > a {
+  color: #aaaaaa;
+}
+ul.main-navigation-menu > li > ul > li > a:hover {
+  color: #ffffff;
+
+	/* Menu Links: Show ellipsis "..." instead of wrapping menu text onto next line, show all text on hover and menu selected */
+  overflow: visible;
+	white-space: normal;
+}
+ul.main-navigation-menu > li > ul > li.current > a {
+  color: #ffffff;
+  font-weight: bold;
+  /*background: transparent url('../../../lib/images/menu-current-arrow.gif') right center no-repeat !important;*/
+
+	/* Menu Links: Show ellipsis "..." instead of wrapping menu text onto next line, show all text on hover and menu selected */
+  overflow: visible;
+	white-space: normal;
+
+}
+ul.main-navigation-menu > li > ul > li.current {
+  background-color: #222222;
+  overflow: hidden;
+}
+ul.main-navigation-menu > li > ul > li.current > a:after {
+  /* emulate appending a <span class=".fa .fa-caret-left"></span> */
+  color: #f0f0f0;
+  content: "\f0d9"; /* fa-caret-left */
+  font-size: 200%; margin-top: -3px; margin-right: -7px;
+  float: right;
+  display:inline-block;font-family:FontAwesome;font-style:normal;font-weight:normal;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+}
+
+.sidebar-myaccount {
+  color: #666666;
+}
+.sidebar-myaccount a {
+  color: #aaaaaa;
+}
+.sidebar-myaccount a:hover {
+  color: #ffffff;
+}
+
+
+
+
+.main-container, .footer, .main-navigation, ul.main-navigation-menu > li > ul.sub-menu, .navigation-small ul.main-navigation-menu > li > ul.sub-menu  {
+  background-color: #222222 !important;
+}
+.navbar-inverse {
+  background: #003C66; 
+  border-color: #aaaaaa;
+}
+
+
+.navbar-toggle {
+  background-color: #222222;
+  color:#D9D9D9;
+}
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+  background-color: #ffffff;
+  -moz-box-shadow: 0 0 15px #ffffff;
+  -webkit-box-shadow: 0 0 15px #ffffff;
+  box-shadow: 0px 0px 15px #ffffff;
+  
+}
+.navbar-inverse .navbar-toggle:hover span, .navbar-inverse .navbar-toggle:focus span {
+  color: #222222;
+}
+.navbar-toggle span{
+  color: #ffffff;  
+}
+
+ul.main-navigation-menu > li > a {
+  border-bottom-color: #222222;
+  border-top-color: #222222;
+  color: #ffffff;
+  background: #0062A6;
+}
+ul.main-navigation-menu > li > a > i {
+  color: #ffffff;
+  font-weight: normal;
+}
+ul.main-navigation-menu > li.active > a {
+  background: #F6F6F6 !important;
+  /*border-top: none !important;*/
+  color: #000000 !important;
+}
+ul.main-navigation-menu > li.active > a .selected:before {
+  color: #F6F6F6 !important;
+}
+ul.main-navigation-menu > li.active > a i {
+  color: #fff;
+}
+ul.main-navigation-menu > li.open > a, ul.main-navigation-menu > li > a:hover, ul.main-navigation-menu > li:hover > a {
+  color: #ffffff;
+  background: #0062A6;
+}
+ul.main-navigation-menu li > ul.sub-menu > li.open > a, ul.main-navigation-menu li > ul.sub-menu > li.active > a, ul.main-navigation-menu li > ul.sub-menu > li > a:hover {
+  color: #ffffff !important;
+  background: #465E79 !important;
+}
+.main-content .container {
+  border-left: none;
+  border-bottom: none;
+}
+@media (max-width: 767px) {
+  .navbar-inverse {
+    background: none !important;
+  }
+  .navbar-header {
+    background-color: #003C66;
+  }
+}
+
+
+
+.main-navigation .sidebar-title a {
+  color: #ffffff;
+}
+
+
+/* === FORM FIELDS === (disabled because option:hover can't be styled, as well as input[type=checkbox] and input[type=radio])
+textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {
+  background-color: ;
+  color: ;
+  border-color: ;
+}
+textarea:hover, input[type="text"]:hover, input[type="password"]:hover, input[type="datetime"]:hover, input[type="datetime-local"]:hover, input[type="date"]:hover, input[type="month"]:hover, input[type="time"]:hover, input[type="week"]:hover, input[type="number"]:hover, input[type="email"]:hover, input[type="url"]:hover, input[type="search"]:hover, input[type="tel"]:hover, input[type="color"]:hover {
+  border-color: ;
+}
+textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus {
+  border-color: ;
+}
+*/
+
+
+.table thead tr {
+  color: #707070;
+}
+.table-striped>tbody>tr:nth-child(odd)>td {
+  background-color: #f9f9f9;
+}
+.table-striped>tbody>tr:nth-child(even)>td {
+  background-color: #F3F3F3;
+}
+.table:hover>tbody>tr:hover>td,
+.table:hover>tbody>tr:hover>th {
+  background-color: #e7e7e7;
+}
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
+  border-top-color: #dddddd;
+}
+
+.table-bordered {
+  border-color: #dddddd;
+}
+.table-bordered>thead>tr>th, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>tbody>tr>td, .table-bordered>tfoot>tr>td {
+  border-color: #dddddd;
+}
+
+
+.alert-success {
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+}
+.alert-info {
+  color: #31708f;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+}
+.alert-warning {
+  color: #8a6d3b;
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+}
+.alert-danger {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+.close {
+  color: #000000;
+  text-shadow: 0 1px 0 #ffffff;
+}
+
+
+code {
+  color: #333333;
+  background-color: #EEEEEE;
+}
+
+
+.nav-tabs > li > a, .nav-tabs > li > a:focus {
+  background-color: #F9F9F9;
+  border-color: #DDDDDD;
+  color: #999999;
+}
+
+.nav-tabs > li > a:hover {
+    background-color: inherit;
+    border-color: #DDDDDD;
+    color: inherit;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+  background-color: #FFFFFF;
+  border-color: #DDDDDD;
+  color: #333333;
+}
+.tab-content {
+  border-color: #DDDDDD;
+}
+
+.text-muted {
+  color: #BBBBBB;
+}
+.text-danger {
+  color: #CC0000;
+}
+.main-navigation-menu .text-danger {
+  color: #ff5500;
+}
+
+
+.pagination > li > a {
+  color: #000000;
+  background-color: #ffffff;
+}
+.pagination>li.text-muted>a {
+  color: #BBBBBB;
+  background-color: inherit;
+}
+.pagination>li>a:hover, .pagination>li>span:hover, .pagination>li>a:focus, .pagination>li>span:focus {
+  color: #000000;
+  background-color: #eeeeee; /*#fff*/;
+}
+.pagination > li > a, .pagination > li > span {
+  border-color: #dddddd; /*#ddd*/
+}
+.pagination>.active>a, .pagination>.active>span, .pagination>.active>a:hover, .pagination>.active>span:hover, .pagination>.active>a:focus, .pagination>.active>span:focus {
+  color: #000000; /*#000*/;
+  background-color: #ffffff; /*#fff*/;
+  border-color: #aaaaaa; /*#aaa*/;
+}
+
+
+.uploadlist th {
+  border-color: #dddddd;
+}
+.uploadIframe {
+  border-color: #dddddd;
+}
+
+
+/* === FONTS === */
+
+body, .btn, .btn-icon .badge {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.page-header h1, h1, h2, h3, .separator, .navbar > .container .navbar-brand, .logo, .sidebar-title a {
+  font-family: 'Raleway', sans-serif;
+}
+
+
+/* === BUTTONS === */
+
+
+.btn-primary {
+        background-color: #005e91 !important;
+      background-repeat: repeat-x;
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0094e6", endColorstr="#005e91");
+      background-image: -khtml-gradient(linear, left top, left bottom, from(#0094e6), to(#005e91));
+      background-image: -moz-linear-gradient(top, #0094e6, #005e91);
+      background-image: -ms-linear-gradient(top, #0094e6, #005e91);
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #0094e6), color-stop(100%, #005e91));
+      background-image: -webkit-linear-gradient(top, #0094e6, #005e91);
+      background-image: -o-linear-gradient(top, #0094e6, #005e91);
+      background-image: linear-gradient(#0094e6, #005e91);
+              border-color: #285E8E;
+            color: #ffffff !important;
+              text-shadow: 0 -1px 0 #000000;
+            -webkit-font-smoothing: antialiased;
+    }
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active {
+  background-position: 0 -15px;
+}
+
+.btn-default {
+        background-color: #d8d8d8 !important;
+      background-repeat: repeat-x;
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e6e6e6", endColorstr="#d8d8d8");
+      background-image: -khtml-gradient(linear, left top, left bottom, from(#e6e6e6), to(#d8d8d8));
+      background-image: -moz-linear-gradient(top, #e6e6e6, #d8d8d8);
+      background-image: -ms-linear-gradient(top, #e6e6e6, #d8d8d8);
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e6e6e6), color-stop(100%, #d8d8d8));
+      background-image: -webkit-linear-gradient(top, #e6e6e6, #d8d8d8);
+      background-image: -o-linear-gradient(top, #e6e6e6, #d8d8d8);
+      background-image: linear-gradient(#e6e6e6, #d8d8d8);
+              border-color: #adadad;
+            color: #000000 !important;
+              text-shadow: 0 1px 1px #ffffff;
+            -webkit-font-smoothing: antialiased;
+    }
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active,
+.btn-default.active {
+  background-position: 0 -15px;
+}
+
+.panel-heading, .separator > div {
+        background-color: #dddddd !important;
+      background-repeat: repeat-x;
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#eeeeee", endColorstr="#dddddd");
+      background-image: -khtml-gradient(linear, left top, left bottom, from(#eeeeee), to(#dddddd));
+      background-image: -moz-linear-gradient(top, #eeeeee, #dddddd);
+      background-image: -ms-linear-gradient(top, #eeeeee, #dddddd);
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eeeeee), color-stop(100%, #dddddd));
+      background-image: -webkit-linear-gradient(top, #eeeeee, #dddddd);
+      background-image: -o-linear-gradient(top, #eeeeee, #dddddd);
+      background-image: linear-gradient(#eeeeee, #dddddd);
+              border-color: #cccccc;
+            color: #000000 !important;
+              text-shadow: 0 1px 1px #ffffff;
+            -webkit-font-smoothing: antialiased;
+    }
+
+.separator > div {
+        background-color: #dddddd !important;
+      background-repeat: repeat-x;
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#eeeeee", endColorstr="#dddddd");
+      background-image: -khtml-gradient(linear, left top, left bottom, from(#eeeeee), to(#dddddd));
+      background-image: -moz-linear-gradient(top, #eeeeee, #dddddd);
+      background-image: -ms-linear-gradient(top, #eeeeee, #dddddd);
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eeeeee), color-stop(100%, #dddddd));
+      background-image: -webkit-linear-gradient(top, #eeeeee, #dddddd);
+      background-image: -o-linear-gradient(top, #eeeeee, #dddddd);
+      background-image: linear-gradient(#eeeeee, #dddddd);
+              border-color: #cccccc;
+            color: #000000 !important;
+              text-shadow: 0 1px 1px #ffffff;
+            -webkit-font-smoothing: antialiased;
+      border-radius: 3px;
+}
+
+.separator > div {
+  border-radius: 3px;
+  border: 1px solid #cccccc;
+}
+
+
+
+
+/* === rounded, gradiated table head === */
+.table {
+  border-collapse: separate;
+}
+.table thead > tr > *:first-child {
+  border-radius: 3px 0 0 0;
+  border-width: 1px 0 1px 1px !important;
+}
+.table thead > tr > *:last-child {
+  border-radius: 0 3px 0 0;
+  border-width: 1px 1px 1px 0 !important;
+}
+.table thead > tr > * {
+        background-color: #dddddd !important;
+      background-repeat: repeat-x;
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#eeeeee", endColorstr="#dddddd");
+      background-image: -khtml-gradient(linear, left top, left bottom, from(#eeeeee), to(#dddddd));
+      background-image: -moz-linear-gradient(top, #eeeeee, #dddddd);
+      background-image: -ms-linear-gradient(top, #eeeeee, #dddddd);
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eeeeee), color-stop(100%, #dddddd));
+      background-image: -webkit-linear-gradient(top, #eeeeee, #dddddd);
+      background-image: -o-linear-gradient(top, #eeeeee, #dddddd);
+      background-image: linear-gradient(#eeeeee, #dddddd);
+            color: #707070 !important;
+              text-shadow: 0 1px 1px #ffffff;
+            -webkit-font-smoothing: antialiased;
+      border-color: #cccccc !important;
+  border-width: 1px 0 !important;
+  border-style: solid !important;
+}
+.table tbody > tr:first-child > * {
+  border-top: none !important;
+}
+.table-bordered {
+  border: none;
+}
+.table-bordered tbody > tr > * {
+  border-right-width: 0 !important;
+  border-bottom-width: 0 !important;
+}
+.table-bordered tbody > tr > *:last-child {
+  border-right-width: 1px !important;
+}
+.table-bordered tbody > tr:last-child > * {
+  border-bottom-width: 1px !important;
+}
+.table-bordered tbody > tr:last-child > *:first-child {
+  border-radius: 0 0 0 3px;
+}
+.table-bordered tbody > tr:last-child > *:last-child {
+  border-radius: 0 0 3px 0;
+}

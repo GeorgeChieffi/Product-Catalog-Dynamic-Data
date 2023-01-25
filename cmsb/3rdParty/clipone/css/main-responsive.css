@@ -1,0 +1,204 @@
+/* ---------------------------------------------------------------------- */
+/*	From Medium Devices Up To Larger Devices
+/* ---------------------------------------------------------------------- */
+@media (min-width: 980px) and (max-width: 1199px) {
+}
+
+/* ---------------------------------------------------------------------- */
+/*	Only larger Devices
+/* ---------------------------------------------------------------------- */
+@media (min-width: 1200px) {
+}
+
+/* ---------------------------------------------------------------------- */
+/*	From Small Devices Up To Medium Devices
+/* ---------------------------------------------------------------------- */
+@media (min-width: 768px) and (max-width: 979px) {
+}
+
+/* ---------------------------------------------------------------------- */
+/*	Extra Small Devices Only
+/* ---------------------------------------------------------------------- */
+@media (max-width: 767px) {
+	.header-default .navbar {
+		position: relative !important;
+	}
+	.main-container {
+		margin-top: 90px;
+	}
+	/***
+	 Main content
+	 ***/
+	.main-content {
+		padding: 0px !important;
+	}
+
+	/***
+	 Main title small text
+	 ***/
+	.page-header small {
+		display: block;
+		clear: both;
+	}
+	.main-navigation {
+		position: fixed;
+		top: 95px;
+		left: 0;
+		right: 0;
+		z-index: 1000;
+		border-top: none;
+	}
+	.header-default .main-navigation {
+		position: static !important;
+		height: auto !important;
+		top: 0;
+		max-height: none;
+		margin-top: -1px;
+	}
+	.main-content > .container {
+		padding: 10px;
+	}
+
+	/***
+	 Footer
+	 ***/
+	.footer {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	.page-header h1 {
+		font-size: 26px; }
+	ul.main-navigation-menu > li.active > a:after {
+		content: none; }
+	.panel-body {
+		padding: 10px; }
+	.accordion-custom .panel-body {
+		padding: 10px 0px; }
+	.form-control {
+		font-size: 12px;
+		padding: 8px; }
+	.form-horizontal .accordion-custom .panel-body .form-inline .form-group {
+		margin-left: 0px;
+		margin-right: 0px; }
+	.form-horizontal .form-inline .form-control,
+	.form-horizontal .form-inline input[type="text"].form-control {
+		font-size: 12px;
+		display: inline-block;
+		width: auto; }
+	.tablefooter .form-inline .form-control {
+		display: inline-block;
+		width: auto;
+		vertical-align: middle; }
+	.page-header .text-right,
+	.tablefooter .text-right {
+		text-align: right !important; }
+	#dt .spacedTable td:before {
+		content: none; }
+	table.dataTable tr.child ul li {
+		white-space: normal; }
+	table#dt table.spacedTable {
+		font-size: 12px; }
+	table#dt table.spacedTable tbody td:first-child,
+	table#dt table.spacedTable tbody th:first-child {
+		padding-left: 0px; }
+	table#dt {
+		width: 100% !important; }
+	table#dt .nopadleft {
+		padding-left: 7px; }
+	.quickadd input,
+	.quickadd select {
+		margin-bottom: 15px; }
+	.quickadd button {
+		margin: 0px; }
+	.quickadd [class^="col-sm-"] {
+		padding: 0px; }
+	table.mceLayout, textarea.tinyMCE {
+		width: 100% !important; }
+	.mceToolbar td {
+		display:table-row;
+		float: left; }
+	.mceToolbar td:nth-of-type(11){
+		clear: left; }
+
+	/** RESPONSIVE TABLES **/
+	.table-wrap {
+		overflow-x: auto;
+		margin-bottom:20px; }
+	.table-wrap::-webkit-scrollbar {
+		height:12px; }
+	.table-wrap::-webkit-scrollbar-track {
+		box-shadow:0 0 2px rgba(0,0,0,0.15) inset;
+		background:#f0f0f0; }
+	.table-wrap::-webkit-scrollbar-thumb {
+		border-radius:6px;
+		background:#ccc; }
+	.table-wrap table {
+		margin-bottom:0; }
+
+}
+
+/* ---------------------------------------------------------------------- */
+/*	Extra Small Devices Only
+/* ---------------------------------------------------------------------- */
+@media (max-width: 480px) {
+	/***
+	 Dropdown and dropdown elements.
+	 ***/
+	.nav {
+		clear: both !important;
+	}
+
+	.hidden-480 {
+		display: none !important;
+	}
+}
+
+/* ---------------------------------------------------------------------- */
+/*	Up To Medium Devices
+/* ---------------------------------------------------------------------- */
+@media (max-width: 979px) {
+	/***
+	 general body settings
+	 ***/
+	body {
+		margin: 0px !important;
+	}
+	.main-navigation {
+		z-index: 1000;
+	}
+
+}
+
+/* ---------------------------------------------------------------------- */
+/*	Medium Devices and Up
+/* ---------------------------------------------------------------------- */
+@media (min-width: 768px) {
+	.main-navigation {
+		position: absolute;
+		width: 225px;
+	}
+	.navbar-collapse.in {
+		overflow-y: visible;
+	}
+	.main-content {
+		margin-left: 225px;
+	}
+	.main-content > .container {
+		min-height: 100vh;
+    padding: 10px;
+	}
+	ul.main-navigation-menu > li.active > a .selected:before {
+		display: block;
+		height: 41px;
+		position: absolute;
+		right: -10px;
+		top: -1px;
+		width: 11px;
+		content: "\e16c";
+		font-family: 'clip-font';
+		line-height: 41px;
+		font-size: 24px;
+	}
+
+}
